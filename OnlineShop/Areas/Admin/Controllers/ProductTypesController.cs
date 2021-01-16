@@ -69,6 +69,32 @@ namespace OnlineShop.Areas.Admin.Controllers
 
         }
 
+        //create get action method
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var productType = _db.ProductTypes.Find(id);
+            if (productType == null)
+            {
+                return NotFound();
+            }
+
+            return View(productType);
+        }
+        //EDIT post action method 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public  IActionResult Details(ProductTypes productTypes)
+        {
+           
+            
+                return RedirectToAction(nameof(Index));
+            
+           
+        }
 
     }
 }
