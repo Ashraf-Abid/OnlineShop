@@ -171,3 +171,4 @@ C:\Users\ASUS\source\repos\OnlineShop\OnlineShop\obj\Debug\netcoreapp3.1\scopedc
 C:\Users\ASUS\source\repos\OnlineShop\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ButtonPartial.cshtml.g.cs
 C:\Users\ASUS\source\repos\OnlineShop\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ProductTypes\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\OnlineShop\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ProductTypes\Details.cshtml.g.cs
+C:\Users\ASUS\source\repos\OnlineShop\OnlineShop\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ProductTypes\Delete.cshtml.g.cs

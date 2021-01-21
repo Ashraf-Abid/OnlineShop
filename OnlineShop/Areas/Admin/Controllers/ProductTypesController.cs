@@ -96,5 +96,51 @@ namespace OnlineShop.Areas.Admin.Controllers
            
         }
 
+        //create get action method
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var productType = _db.ProductTypes.Find(id);
+            if (productType == null)
+            {
+                return NotFound();
+            }
+
+            return View(productType);
+        }
+        //Delete post action method 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int? id,ProductTypes productTypes)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            if (id != productTypes.Id)
+            {
+                return NotFound();
+            }
+            var productType = _db.ProductTypes.Find(id);
+            if (productType == null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                _db.Remove(productType);
+                await _db.SaveChangesAsync();
+                return RedirectToAction(actionName: nameof(Index));
+
+            }
+
+            return View(productTypes);
+
+        }
+
+
     }
 }
